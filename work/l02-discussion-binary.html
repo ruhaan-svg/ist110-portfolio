@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Binary statement: IST 110 portfolio, Ruhaan Pius</title>
+  <meta name="description" content="Translate three binary strings into text with an ASCII table, post the results and compare them with classmates&#x27; translations.">
+  <meta name="author" content="Ruhaan Pius">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../fonts/alegreya-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="sheet">
+      <p class="site-name"><a href="../index.html">Ruhaan Pius</a></p>
+      <p class="site-sub">IST 110 learning portfolio, Fall 2026</p>
+      <nav class="site-nav" aria-label="Sections">
+        <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About me</a></li>
+        <li><a href="../assignments.html">Assignments</a></li>
+        <li><a href="../group-work.html">Group work</a></li>
+        <li><a href="../discussions.html" aria-current="page">Discussions</a></li>
+        <li><a href="../reflections.html">Reflections</a></li>
+        <li><a href="../skills.html">Skills</a></li>
+        <li><a href="../feedback.html">Feedback</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="sheet">
+<article class="entry">
+<h1><span class="margin-note">L02</span> Binary statement</h1>
+<p class="meta">Lesson 2, History and Basics. Discussion, posted 10 September 2026.</p>
+<h2 id="task">The prompt</h2>
+<p>Translate three binary strings into text with an ASCII table, post the results and compare them with classmates' translations.</p>
+<h2 id="post">My post</h2>
+<div class="post">
+<ul>
+<li>Hello</li>
+<li>This is a binary code</li>
+<li>I love data</li>
+</ul>
+<p>I decoded these by hand first rather than using a converter, because I wanted to see the structure rather than just the output. Each 8-bit byte is a place-value sum of 128, 64, 32, 16, 8, 4, 2, 1, so 01001000 is 64 + 8 = 72, which maps to H in ASCII. I cross-checked the full set with an ASCII table afterwards.</p>
+<p>Two things stood out. First, the space character 00100000 appears so often that you can break a long string into words before decoding a single letter, which made string 2 much faster than string 1. Second, the last two bytes of string 3 are 00001010, decimal 10, which isn't a letter at all. It's the line feed control character. That was the one point where I nearly went wrong, and it made the bigger idea click: ASCII doesn't only encode what you can see on screen, it also encodes formatting and control instructions. Everything a computer stores, from letters to line breaks to the structure of a file, is the same 1s and 0s. The meaning comes entirely from the encoding standard both sides agree to use.</p>
+</div>
+<h2 id="replies">My replies to classmates</h2>
+<div class="post reply">
+<h3 class="context">To a classmate who found the similar-looking codes confusing</h3>
+<p>Same three, so we match. The similar-looking codes tripped me up too, and there's a reason: consecutive letters only differ in the last few bits, and upper and lower case of the same letter differ by exactly one bit (01000001 is A, 01100001 is a). So a single misread digit puts you a letter or a case off.</p>
+<p>Small thing, each 8-digit group is a byte, made up of 8 bits. Liked your last point about presence or absence of one thing scaling up to all of this.</p>
+</div>
+<div class="post reply">
+<h3 class="context">To a classmate who decoded each byte in two halves</h3>
+<p>Same three for me, so we're consistent. Your half-and-half trick makes sense: the first four bits narrow you to a block of the table and the last four pick the character, so you're not holding all eight in your head.</p>
+<p>On the last one, 00001010 is 10 in decimal, which is the line feed character, so it's just two blank lines. Anything under 32 in ASCII is a control character rather than something printable, which I thought was the neatest part of this.</p>
+</div>
+<h2 id="reflection">Reflection</h2>
+<p class="pending">Reflection in progress.</p>
+<h2 id="skills">Skills</h2>
+<ul class="skills">
+<li><a href="../skills.html#binary">Binary and character encoding</a></li>
+<li><a href="../skills.html#dialogue">Building on other people's ideas</a></li>
+</ul>
+</article>
+<nav class="pager" aria-label="Previous and next work">
+<p><span class="dir">Previous</span> <a rel="prev" href="l02-binary.html">Binary representation</a></p>
+<p><span class="dir">Next</span> <a rel="next" href="l03-computational-thinking.html">Computational thinking infographic</a></p>
+</nav>
+  </main>
+  <footer class="site-footer">
+    <div class="sheet">
+      <p>Ruhaan Pius, IST 110 Section 002, Penn State, Fall 2026.</p>
+      <p><a href="mailto:Ruhaan@psu.edu">Ruhaan@psu.edu</a> or <a href="https://www.linkedin.com/in/ruhaan-p/">LinkedIn</a></p>
+    </div>
+  </footer>
+</body>
+</html>

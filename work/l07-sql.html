@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SQL basics: IST 110 portfolio, Ruhaan Pius</title>
+  <meta name="description" content="Write and run SQL statements in the W3Schools editor to select, filter, sort, de-duplicate, insert and delete records, with a screenshot of each result.">
+  <meta name="author" content="Ruhaan Pius">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../fonts/alegreya-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="sheet">
+      <p class="site-name"><a href="../index.html">Ruhaan Pius</a></p>
+      <p class="site-sub">IST 110 learning portfolio, Fall 2026</p>
+      <nav class="site-nav" aria-label="Sections">
+        <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About me</a></li>
+        <li><a href="../assignments.html" aria-current="page">Assignments</a></li>
+        <li><a href="../group-work.html">Group work</a></li>
+        <li><a href="../discussions.html">Discussions</a></li>
+        <li><a href="../reflections.html">Reflections</a></li>
+        <li><a href="../skills.html">Skills</a></li>
+        <li><a href="../feedback.html">Feedback</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="sheet">
+<article class="entry">
+<h1><span class="margin-note">L07</span> SQL basics</h1>
+<p class="meta">Lesson 7, Data Organization. Assignment, submitted 18 October 2026.</p>
+<h2 id="task">The task</h2>
+<p>Write and run SQL statements in the W3Schools editor to select, filter, sort, de-duplicate, insert and delete records, with a screenshot of each result.</p>
+<h2 id="work">What I made</h2>
+<p>Each statement, with what it returned:</p>
+<pre><code>SELECT * FROM Customers;              -- 91 records
+
+SELECT CustomerName FROM Customers
+WHERE City = 'Berlin';                -- 1 record
+
+SELECT CustomerName FROM Customers
+WHERE Country = 'USA'
+ORDER BY CustomerName;                -- 13 records, A to Z
+
+SELECT City FROM Customers;           -- 91 records
+SELECT DISTINCT City FROM Customers;  -- 69 unique cities
+
+INSERT INTO Categories (CategoryName, Description)
+VALUES ('Frozen Foods', 'French Fries, TV Dinners, Eggos');
+
+DELETE FROM Categories
+WHERE CategoryName = 'Frozen Foods';</code></pre>
+<p>The INSERT and DELETE statements came back with a permission error. The W3Schools editor now runs on a shared database that visitors can only read, because Chrome removed the in-browser database it used to rely on. The syntax of both statements is correct, and I explained the error in a comment on my submission.</p>
+<figure class="shot" style="--r: 1.2944">
+<figcaption>Page 1 of 5</figcaption>
+<a class="frame" href="../img/l07-sql-1.webp" aria-label="Open page 1 full size"><img src="../img/l07-sql-1.webp" width="1240" height="1605" alt="Page 1 of my SQL screenshots"></a>
+</figure>
+<details class="more">
+<summary>See the other 4 pages</summary>
+<div class="pages">
+<figure class="shot" style="--r: 1.2944">
+<figcaption>Page 2 of 5</figcaption>
+<a class="frame" href="../img/l07-sql-2.webp" aria-label="Open page 2 full size"><img src="../img/l07-sql-2.webp" width="1240" height="1605" alt="Page 2 of my SQL screenshots" loading="lazy"></a>
+</figure>
+<figure class="shot" style="--r: 1.2944">
+<figcaption>Page 3 of 5</figcaption>
+<a class="frame" href="../img/l07-sql-3.webp" aria-label="Open page 3 full size"><img src="../img/l07-sql-3.webp" width="1240" height="1605" alt="Page 3 of my SQL screenshots" loading="lazy"></a>
+</figure>
+<figure class="shot" style="--r: 1.2944">
+<figcaption>Page 4 of 5</figcaption>
+<a class="frame" href="../img/l07-sql-4.webp" aria-label="Open page 4 full size"><img src="../img/l07-sql-4.webp" width="1240" height="1605" alt="Page 4 of my SQL screenshots" loading="lazy"></a>
+</figure>
+<figure class="shot" style="--r: 1.2944">
+<figcaption>Page 5 of 5</figcaption>
+<a class="frame" href="../img/l07-sql-5.webp" aria-label="Open page 5 full size"><img src="../img/l07-sql-5.webp" width="1240" height="1605" alt="Page 5 of my SQL screenshots" loading="lazy"></a>
+</figure>
+</div>
+</details>
+<p class="download"><a href="../files/l07-sql.pdf" download>Download the original</a> (PDF, 5 pages, 478 KB)</p>
+<h2 id="feedback">Feedback</h2>
+<blockquote class="said"><p>Noted</p></blockquote>
+<p class="who">My instructor, in reply to my comment about the read-only editor</p>
+<h2 id="reflection">Reflection</h2>
+<p class="pending">Reflection in progress.</p>
+<h2 id="skills">Skills</h2>
+<ul class="skills">
+<li><a href="../skills.html#sql">SQL queries</a></li>
+<li><a href="../skills.html#databases">Relational database thinking</a></li>
+</ul>
+</article>
+<nav class="pager" aria-label="Previous and next work">
+<p><span class="dir">Previous</span> <a rel="prev" href="l07-music-genome.html">Music Genome Project</a></p>
+<p><span class="dir">Next</span> <a rel="next" href="l07-discussion-macros.html">Excel macros</a></p>
+</nav>
+  </main>
+  <footer class="site-footer">
+    <div class="sheet">
+      <p>Ruhaan Pius, IST 110 Section 002, Penn State, Fall 2026.</p>
+      <p><a href="mailto:Ruhaan@psu.edu">Ruhaan@psu.edu</a> or <a href="https://www.linkedin.com/in/ruhaan-p/">LinkedIn</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Excel macros: IST 110 portfolio, Ruhaan Pius</title>
+  <meta name="description" content="Find a real example of an Excel macro and explain what it automates, how it works, its benefits and limits, and how it could be adapted.">
+  <meta name="author" content="Ruhaan Pius">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../fonts/alegreya-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="sheet">
+      <p class="site-name"><a href="../index.html">Ruhaan Pius</a></p>
+      <p class="site-sub">IST 110 learning portfolio, Fall 2026</p>
+      <nav class="site-nav" aria-label="Sections">
+        <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About me</a></li>
+        <li><a href="../assignments.html">Assignments</a></li>
+        <li><a href="../group-work.html">Group work</a></li>
+        <li><a href="../discussions.html" aria-current="page">Discussions</a></li>
+        <li><a href="../reflections.html">Reflections</a></li>
+        <li><a href="../skills.html">Skills</a></li>
+        <li><a href="../feedback.html">Feedback</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="sheet">
+<article class="entry">
+<h1><span class="margin-note">L07</span> Excel macros</h1>
+<p class="meta">Lesson 7, Data Organization. Discussion, posted 15 October 2026.</p>
+<h2 id="task">The prompt</h2>
+<p>Find a real example of an Excel macro and explain what it automates, how it works, its benefits and limits, and how it could be adapted.</p>
+<h2 id="post">My post</h2>
+<div class="post">
+<h3>Example: consolidating multiple sheets into one summary</h3>
+<p>The macro I found loops through every tab in a workbook (e.g. one sheet per region or month) and stacks all the data onto a single “Summary” sheet. Done by hand, that’s a lot of copy and paste and it’s easy to skip a tab or paste over rows. The macro does it in seconds and the same way every time.</p>
+<p><strong>How it works:</strong> It’s written in VBA. It creates a Summary sheet, copies the headers once, then uses a For Each loop to go through each sheet. End(xlUp) finds the last row of data (like pressing Ctrl + Up Arrow), and each block gets pasted below the previous one. So it’s just Excel’s normal copy, paste and range features driven by code.</p>
+<p><strong>Benefits and challenges:</strong> It saves time and makes recurring reports consistent and easier to check. The catch is it assumes every sheet has the same layout, so one extra column or blank row can quietly break the output. Macros also can’t be undone with Ctrl + Z.</p>
+<p><strong>Customisation:</strong> You can change the columns, skip certain sheets, or add a column showing which sheet each row came from. Power Query can do similar consolidation without any code.</p>
+<p><strong>Resources:</strong> Microsoft Learn’s VBA guides, ExcelJet, and Leila Gharani on YouTube. Excel’s Macro Recorder is also a good way to learn, since it writes the code as you click.</p>
+<p><strong>Security:</strong> Macros can run harmful code, which is why Excel blocks them by default in downloaded files. Only enable macros from trusted sources, read the code (Alt + F11) before running it, and keep Trust Center settings on “disable with notification”.</p>
+</div>
+<h2 id="replies">My replies to classmates</h2>
+<div class="post reply">
+<h3 class="context">To a classmate whose macro calculated final grades</h3>
+<p>Grade calculation is a great example, especially since we all want our final grades faster! One thing I noticed is that most of what you described (AVERAGE, weights, IF for letter grades) can actually be done with regular formulas, so a macro might add the most value on top of that, like importing scores from Canvas or generating a report for each student automatically. Also, an XLOOKUP against a small grade-range table could be easier to update than a long nested IF if a professor changes their cutoffs. Your point about one coding mistake affecting every student is a good one too.</p>
+</div>
+<div class="post reply">
+<h3 class="context">To a classmate whose macro handled weekly sales data</h3>
+<p>Sales data is a really practical example, since that's something almost every business deals with weekly. I liked that you pointed out macros can break when the layout changes. One fix I came across is formatting the data as an Excel Table first, so the macro refers to the table rather than fixed cell ranges and still works when new rows are added. Did you find the Record Macro feature handled that well, or would the code need editing afterwards?</p>
+</div>
+<h2 id="reflection">Reflection</h2>
+<p class="pending">Reflection in progress.</p>
+<h2 id="skills">Skills</h2>
+<ul class="skills">
+<li><a href="../skills.html#spreadsheets">Spreadsheet automation</a></li>
+<li><a href="../skills.html#dialogue">Building on other people's ideas</a></li>
+</ul>
+</article>
+<nav class="pager" aria-label="Previous and next work">
+<p><span class="dir">Previous</span> <a rel="prev" href="l07-sql.html">SQL basics</a></p>
+<p><span class="dir">Next</span> <a rel="next" href="l08-osint.html">Open source intelligence (OSINT)</a></p>
+</nav>
+  </main>
+  <footer class="site-footer">
+    <div class="sheet">
+      <p>Ruhaan Pius, IST 110 Section 002, Penn State, Fall 2026.</p>
+      <p><a href="mailto:Ruhaan@psu.edu">Ruhaan@psu.edu</a> or <a href="https://www.linkedin.com/in/ruhaan-p/">LinkedIn</a></p>
+    </div>
+  </footer>
+</body>
+</html>

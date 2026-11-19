@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programming languages: IST 110 portfolio, Ruhaan Pius</title>
+  <meta name="description" content="Compare machine, assembly and high-level languages through two of several angles. I chose how hard each is to learn and the role each plays in software today.">
+  <meta name="author" content="Ruhaan Pius">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../fonts/alegreya-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="sheet">
+      <p class="site-name"><a href="../index.html">Ruhaan Pius</a></p>
+      <p class="site-sub">IST 110 learning portfolio, Fall 2026</p>
+      <nav class="site-nav" aria-label="Sections">
+        <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About me</a></li>
+        <li><a href="../assignments.html">Assignments</a></li>
+        <li><a href="../group-work.html">Group work</a></li>
+        <li><a href="../discussions.html" aria-current="page">Discussions</a></li>
+        <li><a href="../reflections.html">Reflections</a></li>
+        <li><a href="../skills.html">Skills</a></li>
+        <li><a href="../feedback.html">Feedback</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="sheet">
+<article class="entry">
+<h1><span class="margin-note">L06</span> Programming languages</h1>
+<p class="meta">Lesson 6, Programming Languages. Discussion, posted 7 October 2026.</p>
+<h2 id="task">The prompt</h2>
+<p>Compare machine, assembly and high-level languages through two of several angles. I chose how hard each is to learn and the role each plays in software today.</p>
+<h2 id="post">My post</h2>
+<div class="post">
+<h3>Prompt 5: Learning Curve</h3>
+<p>Machine language is the hardest of the three to learn, because it's pure 0s and 1s and you have to keep track of every memory address yourself. Assembly is easier since instructions get readable names like Add M[4], M[5], M[6], and high-level languages like Python read close to plain English, which is why intro courses start there. Even Python has a learning curve, though: in this week's activity my first run failed with an IndentationError because pasting my code had added extra spaces to every line. The upside is that Python's error messages point you straight to the problem line, whereas a mistake in machine code just quietly gives you the wrong result. Resources follow the same pattern, with W3Schools and free courses everywhere for Python but mostly processor manuals and specialist tutorials for assembly.</p>
+<h3>Prompt 6: Role in Modern Software Development</h3>
+<p>Almost nobody writes machine code by hand any more, but assembly is still essential in niches like device drivers, embedded systems and performance-critical code. In 2024, developers of FFmpeg, the open-source video tool behind a lot of streaming software, hand-wrote assembly for one video-filtering function and measured it running up to 94 times faster than the plain C version (Tom's Hardware, 2024). That figure only applies to one function, but it shows why some teams still drop down to assembly when speed really matters. Almost everything else is now built with high-level languages, and Python was number one on the TIOBE Index in June 2026 with a rating of nearly 19% (TechRepublic, 2026). The trade-off is less control over the hardware in exchange for faster development, which usually makes sense because developer time costs more than processor time.</p>
+<h3>References</h3>
+<p class="ref"><a href="https://www.tomshardware.com/pc-components/cpus/ffmpeg-devs-boast-of-up-to-94x-performance-boost-after-implementing-handwritten-avx-512-assembly-code">https://www.tomshardware.com/pc-components/cpus/ffmpeg-devs-boast-of-up-to-94x-performance-boost-after-implementing-handwritten-avx-512-assembly-code</a></p>
+<p class="ref"><a href="https://www.techrepublic.com/article/news-tiobe-june-2026-rust-hits-new-high/">https://www.techrepublic.com/article/news-tiobe-june-2026-rust-hits-new-high/</a></p>
+</div>
+<h2 id="replies">My replies to classmates</h2>
+<div class="post reply">
+<h3 class="context">To a classmate who explained that high-level languages need translating</h3>
+<p>Your point that high-level languages have to be translated before the computer can run them was a good one to include. There are actually two ways that translation happens: compiled languages like C translate the whole program into machine code ahead of time, while Python is translated as it runs. I noticed this in our Python activity, because the missing-colon error stopped the program before a single line ran, as Python checks the whole file before it starts. That extra translation step is part of why Python is usually slower than C. Do you think that speed difference matters for most everyday programs, or only for things like games and video?</p>
+</div>
+<div class="post reply">
+<h3 class="context">To a classmate who summed up the trade-off between ease and control</h3>
+<p>I liked your point that the higher the level, the easier it is to use but the less control you get, because it sums up the whole topic in one line. One thing I'd add is that C++ sits somewhere in the middle: it's high-level, but it still lets you manage memory yourself, which is why it's used so much for games and other software where speed matters. Your point about assembly and operating systems also ties in with something I found. FFmpeg's developers recently hand-wrote assembly for one function and got it running up to 94 times faster than the C version. Do you think AI coding tools will make low-level languages more or less relevant in the future?</p>
+</div>
+<h2 id="reflection">Reflection</h2>
+<p class="pending">Reflection in progress.</p>
+<h2 id="skills">Skills</h2>
+<ul class="skills">
+<li><a href="../skills.html#languages">How programming languages differ</a></li>
+<li><a href="../skills.html#python">Python basics</a></li>
+<li><a href="../skills.html#research">Finding and judging sources</a></li>
+<li><a href="../skills.html#dialogue">Building on other people's ideas</a></li>
+</ul>
+</article>
+<nav class="pager" aria-label="Previous and next work">
+<p><span class="dir">Previous</span> <a rel="prev" href="l06-python.html">Python: making the computer decide</a></p>
+<p><span class="dir">Next</span> <a rel="next" href="l07-codis.html">CODIS cold case</a></p>
+</nav>
+  </main>
+  <footer class="site-footer">
+    <div class="sheet">
+      <p>Ruhaan Pius, IST 110 Section 002, Penn State, Fall 2026.</p>
+      <p><a href="mailto:Ruhaan@psu.edu">Ruhaan@psu.edu</a> or <a href="https://www.linkedin.com/in/ruhaan-p/">LinkedIn</a></p>
+    </div>
+  </footer>
+</body>
+</html>
