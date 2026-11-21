@@ -57,7 +57,8 @@
 <p>Sales data is a really practical example, since that's something almost every business deals with weekly. I liked that you pointed out macros can break when the layout changes. One fix I came across is formatting the data as an Excel Table first, so the macro refers to the table rather than fixed cell ranges and still works when new rows are added. Did you find the Record Macro feature handled that well, or would the code need editing afterwards?</p>
 </div>
 <h2 id="reflection">Reflection</h2>
-<p class="pending">Reflection in progress.</p>
+<p>In my finance work I've mostly used formulas rather than VBA. The consolidation macro is something I'd actually use for recurring reports, where the same sheets get stacked every week.</p>
+<p>The catch I'd keep in mind is the one I found in my research: if one sheet gets an extra column, the macro can quietly break and nobody notices. So I'd check the layout before trusting the output.</p>
 <h2 id="skills">Skills</h2>
 <ul class="skills">
 <li><a href="../skills.html#spreadsheets">Spreadsheet automation</a></li>
